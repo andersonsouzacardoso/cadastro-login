@@ -1,4 +1,5 @@
 
+ <div class="fundo">
     <div class="autenticar-container">
         <h2>{{paginaLogin ? 'Login' : 'Cadastro'}}</h2>
         <form [formGroup] = "form" (ngSubmit) = "onSubmit()">
@@ -20,3 +21,4 @@
             <button (click)="toggleMode()">{{paginaLogin ? 'Criar conta' : 'Faça Login'}}</button> 
         </p>
     </div>
+</div>
