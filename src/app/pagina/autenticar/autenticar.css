@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Inter:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ✅ CORRIGIDO: era .auth-container, agora bate com o HTML */
+.autenticar-container {
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+  background: radial-gradient(circle,rgba(142, 5, 240, 1) 0%, rgba(111, 66, 125, 1) 50%, rgba(15, 11, 11, 1) 100%);
+}
+
+h2 {
+  font-family: "DynaPuff", system-ui;
+  color: #ffff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* ✅ CORRIGIDO: form em coluna para campos aparecerem um abaixo do outro */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #ffff;
+  margin-bottom: 2px;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border:none;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 0.75rem;
+}
+
+input:focus {
+  border-color: #ac6959;
+  box-shadow: 0 0 0 3px rgba(172, 105, 89, 0.15);
+}
+
+input::placeholder {
+  color: black;
+  font-size: 0.82rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.65rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffff;
+  background-color: black;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background-color: #8E05F0;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+p {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #ffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+p button {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1.5px solid black;
+  cursor: pointer;
+  color: #ffff;
+  background-color: transparent;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+p button:hover {
+  background-color: #8E05F0;
+  color: #ffff;
+}

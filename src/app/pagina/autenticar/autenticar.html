@@ -1,0 +1,22 @@
+
+    <div class="autenticar-container">
+        <h2>{{paginaLogin ? 'Login' : 'Cadastro'}}</h2>
+        <form [formGroup] = "form" (ngSubmit) = "onSubmit()">
+            <div *ngIf="!paginaLogin">
+                <label for="name">Nome : </label>
+                <input id="name" formControlName="name">
+            </div>
+           
+            <label for="email">Email :</label>
+            <input id="email" type="email" formControlName="email" >
+
+            <label for="password">Senha :</label>
+            <input id="password" type="password" formControlName="password" [placeholder]="paginaLogin ? '' : 'Digite uma senha de no minimo 6 digitos.'">
+
+            <button type="submit">{{paginaLogin ? 'Entrar' : 'Cadastrar'}}</button>
+        </form>
+        <p>
+            {{paginaLogin ? 'Cadastre-se' : 'Faça Login'}}
+            <button (click)="toggleMode()">{{paginaLogin ? 'Criar conta' : 'Faça Login'}}</button> 
+        </p>
+    </div>
